@@ -1,0 +1,499 @@
+html,
+body,
+div,
+span,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+form,
+section {
+  padding: 0;
+  margin: 0;
+  font-family: "NotoSansCJK", "PingFangSC-Regular", "PingFang SC", Avenir,
+  Helvetica, Arial, "sans-serif", Noto Sans SC;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+div,
+span,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button，input {
+  font-size: 14px;
+  @media screen and (max-width: 800px) {
+    font-size: 0.14rem;
+    line-height: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+.twoEllipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.centerBlock {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.mContainerWithHead {
+  padding-top: 0.85rem;
+}
+
+.emptyDialog {
+  .el-dialog {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0.16rem;
+  }
+
+  .el-dialog__header,
+  .el-dialog__body {
+    padding: 0;
+  }
+}
+
+.fillImg {
+  width: 100%;
+  height: 100%;
+}
+
+.el-button.is-round {
+  border-radius: 20px;
+  padding: 12px 30px;
+}
+
+.globalEmptyStyle {
+  margin-top: 1.5rem;
+}
+
+.noMore,
+.loading {
+  padding: 0.3rem 0 0.3rem;
+  text-align: center;
+  font-size: 0.14rem;
+  color: #505050;
+}
+
+// 全局覆盖按钮样式
+.el-button {
+  border-radius: 8px;
+  font-size: 14px;
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.el-button--default {
+  @media screen and (max-width: 800px) {
+    border-color: #2a513f;
+    color: #2a513f;
+  }
+}
+
+.customeTab {
+  .el-tabs__header {
+    margin-bottom: 0;
+  }
+
+  .el-tabs__nav-wrap::after {
+    background: transparent;
+  }
+}
+
+.radiusCenterDrawer {
+  border-radius: 0.3rem 0.3rem 0 0;
+
+  .el-drawer__header {
+    margin-bottom: 0;
+
+    & > :first-child {
+      font-size: 0.3rem;
+      color: #333;
+      text-align: center;
+    }
+  }
+}
+
+.tipShow {
+  @media screen and (min-width: 800px) {
+    width: 1186px;
+    color: #fff;
+    margin: 0px auto;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto 0px; */
+    align-items: center;
+  }
+  @media screen and (max-width: 800px) {
+    color: #fff;
+    margin: 0px auto;
+    line-height: 60px;
+    height: 60px;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto 0px; */
+    align-items: center;
+  }
+}
+
+.mPage {
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+}
+
+.pcPage {
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .el-message-box {
+    width: 91%;
+  }
+}
+
+.fWhite {
+  color: #000000;
+}
+
+.fGray {
+  color: #999999;
+}
+
+body {
+  background: #ffffff;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+@font-face {
+  font-family: "iconfont";
+  /* Project id 2751024 */
+  src: url("../theme/fonts/iconfont.woff2?t=1629257266393") format("woff2"),
+  url("../theme/fonts/iconfont.woff?t=1629257266393") format("woff"),
+  url("../theme/fonts/iconfont.ttf?t=1629257266393") format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSansCJK";
+  src: url("../theme/fonts/NotoSansCJK-Regular.otf") format("opentype");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-kejian:before {
+  content: "\e626";
+}
+
+.icon-bukejian:before {
+  content: "\e620";
+}
+
+.icon-s-operation:before {
+  content: "\e678";
+}
+
+.icon-aixin:before {
+  content: "\e640";
+}
+
+.icon-dianzan:before {
+  content: "\e621";
+}
+
+.icon-zhifubao:before {
+  content: "\e6cc";
+}
+
+.icon-weixin:before {
+  content: "\e63f";
+}
+
+.icon-qianbao:before {
+  content: "\e6c4";
+}
+
+.el-message-box__btns .el-button--default {
+  background: #999999;
+  border-radius: 16px;
+  border: 1px solid #999999;
+
+  span {
+    color: #ffffff;
+  }
+
+  &.el-button--primary {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+.el-button.is-round {
+  background: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+
+  span {
+    color: #000000;
+  }
+
+  &.el-button--primary {
+    background-color: #000000;
+    color: #ffffff !important;
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: #fdf8f5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #ccc;
+}
+
+.el-button--primary {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.el-button--primary:focus,
+.el-button--primary:hover {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.el-tabs__active-bar {
+  background-color: #000000;
+}
+
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: #000000;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.certificationTypeRadio
+.el-radio-button__orig-radio:checked
++ .el-radio-button__inner {
+  color: #ffffff;
+}
+
+.el-button.is-round span {
+  color: #000000;
+}
+
+.el-button.is-round.el-button--primary span {
+  color: #ffffff;
+}
+
+.el-message-box__btns .el-button--default {
+  background: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.el-message-box__btns .el-button--default.el-button--primary span {
+  color: #ffffff;
+}
+
+.el-message-box__btns .el-button--default span {
+  color: #000000;
+}
+
+.certificationTypeRadio .el-radio-button__inner {
+  background: #ffffff;
+  border: 1px solid #000000 !important;
+  color: #000000;
+}
+
+.el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.headRt {
+  .certificationTypeRadio
+  .el-radio-button__orig-radio:checked
+  + .el-radio-button__inner {
+    color: #ffffff;
+  }
+
+  .el-button--primary,
+  .el-button--primary:active,
+  .el-button--primary:hover,
+  .el-button--primary:focus,
+  .el-button--primary:visited {
+    color: #000000;
+  }
+}
+
+.el-textarea {
+  margin-top: 8px;
+}
+
+//.userInfor .el-form-item{
+//    margin-bottom:20px;
+//
+//}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-grow {
+  flex: 1;
+  min-width: 1px;
+}
+
+.flex-box-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.fred {
+  color: red;
+}
+
+.el-input-group__prepend {
+  padding-left: 0.16rem;
+  font-size: 0.14rem;
+  background: #ffffff;
+  border-radius: 0.08rem;
+  border: 1px solid #000000;
+  color: #000000;
+  width: 1.5rem;
+}
+
+.el-icon-arrow-up:before {
+  color: #000000;
+}
+
+.el-icon-arrow-up:after {
+  color: #000000;
+}
+
+.el-select-dropdown__item.selected {
+  color: #000;
+  font-weight: 700;
+}
+
+.el-descriptions {
+  color: #2a513f;
+}
+
+.el-button--primary {
+  background-color: #2a513f;
+  border-color: #000000;
+}
+
+// 添加颜色类
+.el-radio.is-bordered {
+  border-color: black !important;
+}
+
+.el-radio.is-bordered.is-checked {
+  border-color: #2a513f !important;
+  background: #2a513f !important;
+}
+
+.el-radio__input.is-checked + .el-radio__label {
+  color: white !important;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  background: black !important;
+  border-color: black !important;
+}
+
+.castingContainer {
+  .el-radio {
+    width: inherit;
+    margin-bottom: 20px;
+    height: 48px;
+    line-height: 25px;
+
+  }
+
+  .el-radio-group {
+    width: 100%;
+  }
+}
